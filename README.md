@@ -8,10 +8,9 @@ Transfer matrix methods for plane wave transmission in multi-layer structures.
 The field in these multi-layer structures can be written in a superposition of planes waves propagating in directions $\pm z$
 
 $$
-E(z)=A_1 e^{i \left(\left(z-z_1\right) k_{1 z}\right)}+B_0 e^{-i \left(\left(z-z_1\right) k_{1 z}\right)},z<z_1\\
-E(z)=A_m e^{i \left(k_{\text{mz}} \left(z-z_m\right)\right)}+B_m e^{-i \left(k_{\text{mz}} \left(z-z_m\right)\right)},z_{m-1}<z<z_m\\
-E(z)=A_{N+1}^{`}e^{i \left(\left(z-z_1\right) k_{N+1,z}\right)}+B_{N+1}^{'}e^{-i \left(\left(z-z_N\right) k_{N+1,z}\right)}
-
+E(z)=A_1 e^{i ((z-z_1) k_{1, z})}+B_0 e^{-i ((z-z_1) k_{1, z})},z<z_1\\
+E(z)=A_m e^{i (k_{m,z} (z-z_m))}+B_m e^{-i (k_{m,z} (z-z_m))},z_{m-1}<z<z_m\\
+E(z)=A_{N+1}^{`}e^{i ((z-z_1) k_{N+1,z})}+B_{N+1}^{'}e^{-i ((z-z_N) k_{N+1,z})}
 $$
 
 The field coefficients can be related via boundary conditions
@@ -39,7 +38,7 @@ D_{m-1}^{-1}D_{m}P_{m}
 $$
 
  where
- 
+
 $$
 D_m^{\text{TE}}=\left(
 \begin{array}{c}
