@@ -8,6 +8,7 @@ Transfer matrix methods for plane wave transmission in multi-layer structures.
 ![image-20221222101405426](README.assets/image-20221222101405426.png)
 
 The field in these multi-layer structures can be written in a superposition of planes waves propagating in directions $\pm z$
+
 $$
 E(z)=\left[\begin{matrix}
 A_1 e^{i \left(\left(z-z_1\right) k_{1 z}\right)}+B_0 e^{-i \left(\left(z-z_1\right) k_{1 z}\right)},z<z_1\\
@@ -15,7 +16,9 @@ A_m e^{i \left(k_{\text{mz}} \left(z-z_m\right)\right)}+B_m e^{-i \left(k_{\text
 A_{N+1}^{`}e^{i \left(\left(z-z_1\right) k_{N+1,z}\right)}+B_{N+1}^{'}e^{-i \left(\left(z-z_N\right) k_{N+1,z}\right)}
 \end{matrix}\right.
 $$
+
 The field coefficients can be related via boundary conditions
+
 $$
 \left(
 \begin{array}{c}
@@ -37,7 +40,9 @@ D_{m-1}^{-1}D_{m}P_{m}
 \end{array}
 \right),m=1,2,3
 $$
+
  where
+ 
 $$
 D_m^{\text{TE}}=\left(
 \begin{array}{c}
@@ -81,6 +86,7 @@ P_m=\left(
 $$
 
 Therefore, the field relation between field components in left and right space are
+
 $$
 \begin{aligned}
 & \left(\begin{array}{l}
@@ -103,11 +109,14 @@ B_{N+1}^{\prime}
 \end{array}\right)
 \end{aligned}
 $$
+
 The general boundary conditions should be
+
 $$
 A_1=1, B_{N+1}^{`}=0,
 B_1=1, A_{N+1}^{`}=0
 $$
+
 **References:** TRANSFER MATRIX APPROACH TO PROPAGATION OF ANGULAR PLANE WAVE SPECTRA THROUGH METAMATERIAL MULTILAYER STRUCTURES, Han Li, UNIVERSITY OF DAYTON, Thesis
 
 `CoeAB_layer_TMM`: This function calculates the field coefficients in different layers.
