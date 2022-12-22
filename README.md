@@ -4,17 +4,14 @@ Transfer matrix methods for plane wave transmission in multi-layer structures.
 
 
 ## Theoretical formulation
-
 ![image-20221222101405426](README.assets/image-20221222101405426.png)
-
 The field in these multi-layer structures can be written in a superposition of planes waves propagating in directions $\pm z$
 
 $$
-E(z)=\left[\begin{matrix}
-A_1 e^{i \left(\left(z-z_1\right) k_{1 z}\right)}+B_0 e^{-i \left(\left(z-z_1\right) k_{1 z}\right)},z<z_1\\
-A_m e^{i \left(k_{\text{mz}} \left(z-z_m\right)\right)}+B_m e^{-i \left(k_{\text{mz}} \left(z-z_m\right)\right)},z_{m-1}<z<z_m\\
-A_{N+1}^{`}e^{i \left(\left(z-z_1\right) k_{N+1,z}\right)}+B_{N+1}^{'}e^{-i \left(\left(z-z_N\right) k_{N+1,z}\right)}
-\end{matrix}\right.
+E(z)=A_1 e^{i \left(\left(z-z_1\right) k_{1 z}\right)}+B_0 e^{-i \left(\left(z-z_1\right) k_{1 z}\right)},z<z_1\\
+E(z)=A_m e^{i \left(k_{\text{mz}} \left(z-z_m\right)\right)}+B_m e^{-i \left(k_{\text{mz}} \left(z-z_m\right)\right)},z_{m-1}<z<z_m\\
+E(z)=A_{N+1}^{`}e^{i \left(\left(z-z_1\right) k_{N+1,z}\right)}+B_{N+1}^{'}e^{-i \left(\left(z-z_N\right) k_{N+1,z}\right)}
+
 $$
 
 The field coefficients can be related via boundary conditions
