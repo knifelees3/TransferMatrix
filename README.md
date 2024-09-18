@@ -8,7 +8,7 @@ Transfer matrix methods for plane wave transmission in multi-layer structures.
 The field in these multi-layer structures can be written in a superposition of planes waves propagating in directions $\pm z$
 
 $$
-E(z)=A_1 e^{i ((z-z_1) k_{1, z})}+B_0 e^{-i ((z-z_1) k_{1, z})},z<z_1\\
+E(z)=A_1 e^{i ((z-z_1) k_{1, z})}+B_1 e^{-i ((z-z_1) k_{1, z})},z<z_1\\
 E(z)=A_m e^{i (k_{m,z} (z-z_m))}+B_m e^{-i (k_{m,z} (z-z_m))},z_{m-1}<z<z_m\\
 E(z)=A_{N+1}^{`}e^{i ((z-z_1) k_{N+1,z})}+B_{N+1}^{'}e^{-i ((z-z_N) k_{N+1,z})}
 $$
@@ -41,14 +41,9 @@ $$
 
 $$
 D_m^{\text{TE}}=\left(
-\begin{array}{c}
- 1 \\
- \text{cos$\theta $}_m \sqrt{\frac{\epsilon _m}{\mu _m}} \\
-\end{array}
-\right) \left(
-\begin{array}{c}
- 1 \\
- \text{cos$\theta $}_m \left(-\sqrt{\frac{\epsilon _m}{\mu _m}}\right) \\
+\begin{array}{cc}
+ 1 & 1\\
+ \text{cos$\theta $}_m \sqrt{\frac{\epsilon _m}{\mu _m}}&\text{cos$\theta $}_m \left(-\sqrt{\frac{\epsilon _m}{\mu _m}}\right) \\
 \end{array}
 \right)
 $$
@@ -56,27 +51,17 @@ $$
 $$
 D_m^{\text{TM}}=\left(
 \begin{array}{c}
- \text{cos$\theta $}_m \\
- n_m \\
-\end{array}
-\right) \left(
-\begin{array}{c}
- \text{cos$\theta $}_m \\
- -n_m \\
+ \text{cos$\theta $}_m &  \text{cos$\theta $}_m\\
+ n_m & -n_m\\
 \end{array}
 \right)
 $$
 
 $$
 P_m=\left(
-\begin{array}{c}
- e^{d_m \left(-\text{ik}_{\text{mx}}\right)} \\
- 0 \\
-\end{array}
-\right) \left(
-\begin{array}{c}
- 0 \\
- e^{d_m \text{ik}_{\text{mx}}} \\
+\begin{array}{cc}
+ e^{d_m \left(-\text{ik}_{\text{mx}}\right)} & 0 \\
+ 0 & e^{d_m \text{ik}_{\text{m x}}} 
 \end{array}
 \right)
 $$
