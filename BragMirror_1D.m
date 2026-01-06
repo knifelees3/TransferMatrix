@@ -34,10 +34,11 @@ theta=0;
 d_layer=layer(2:end-1,1);
 kphi=2*pi./WLMat*sin(theta);
 
-RT=zeros(num_swep,1);
+RT=zeros(num_swep,2);
 
+Ain=1;Bin=0;
 for l=1:num_swep
-    AB_Coe=CoeAB_layer_TMM(d_layer,n_layer,WLMat(l),kphi(l),"TE");
+    AB_Coe=CoeAB_layer_TMM(d_layer,n_layer,WLMat(l),kphi(l),"TE",Ain,Bin);
     RT(l,1)=AB_Coe{1}(2);
     RT(l,2)=AB_Coe{end}(1);
 end
