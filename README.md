@@ -16,22 +16,22 @@ The two methods are implemented using **identical field definitions and boundary
 
 ![](assets/image-20260106141439601.png)
 
-We consider a multilayer structure composed of \( N \) homogeneous layers along the \( z \)-direction.  
+We consider a multilayer structure composed of $ N $ homogeneous layers along the $ z $-direction.  
 The first and last layers are semi-infinite.
 
-In each layer \( m \), the field is written as a superposition of forward- and backward-propagating plane waves:
+In each layer $ m $, the field is written as a superposition of forward- and backward-propagating plane waves:
 
 \[
 E_m(z)=A_m e^{i k_{m,z}(z-z_m)}+B_m e^{-i k_{m,z}(z-z_m)},
 \]
 
 where:
-- \( A_m \) and \( B_m \) are the complex field amplitudes
-- \( k_{m,z} = \sqrt{(k_0 n_m)^2 - k_\parallel^2} \)
-- \( z_m \) is the **right interface position of layer \( m \)**
+- $ A_m $ and $ B_m $ are the complex field amplitudes
+- $ k_{m,z} = \sqrt{(k_0 n_m)^2 - k_\parallel^2} $
+- $ z_m $ is the **right interface position of layer $ m $**
 
 > **Important convention**  
-> For all finite layers, the coefficients \( (A_m,B_m) \) are defined at the **right boundary** of the layer.  
+> For all finite layers, the coefficients $ (A_m,B_m) $ are defined at the **right boundary** of the layer.  
 > For the last semi-infinite layer, they are defined at the **left boundary**.  
 >
 > This convention is used consistently in both the TMM and SMM implementations and is essential for correct field reconstruction.
@@ -83,7 +83,7 @@ n_m & -n_m
 \end{pmatrix}
 \]
 
-The propagation matrix of layer \( m \) with thickness \( d_m \) is:
+The propagation matrix of layer $ m $ with thickness $ d_m $ is:
 
 \[
 P_m=
@@ -115,16 +115,16 @@ T_{1\rightarrow N+1}
 The boundary conditions are:
 
 - **Left incidence:**  
-  \( A_1 = 1,\; \mathcal{B}_{N+1}=0 \)
+  $ A_1 = 1,\; \mathcal{B}_{N+1}=0 $
 - **Right incidence:**  
-  \( B_1 = 1,\; \mathcal{A}_{N+1}=0 \)
+  $ B_1 = 1,\; \mathcal{A}_{N+1}=0 $
 
 ---
 
 ### 2.3 MATLAB Implementation
 
 - `CoeAB_layer_TMM`  
-  Computes the field coefficients \( (A_m,B_m) \) in every layer using the transfer matrix method.
+  Computes the field coefficients $ (A_m,B_m) $ in every layer using the transfer matrix method.
 
 - `Get_Field_From_ABCoe`  
   Reconstructs the spatial field distribution from the AB coefficients using the same reference-plane convention.
@@ -135,7 +135,7 @@ The boundary conditions are:
 
 ### 3.1 Local Scattering Matrix
 
-At the interface between layers \( m \) and \( m+1 \), the incoming and outgoing waves are related by:
+At the interface between layers $ m $ and $ m+1 $, the incoming and outgoing waves are related by:
 
 \[
 \begin{pmatrix}
@@ -153,13 +153,13 @@ B_{m+1}
 \end{pmatrix}.
 \]
 
-The Fresnel coefficients \( r^{L,R} \) and \( t^{L,R} \) depend on the polarization and refractive indices of the adjacent layers.
+The Fresnel coefficients $ r^{L,R} $ and $ t^{L,R} $ depend on the polarization and refractive indices of the adjacent layers.
 
 ---
 
 ### 3.2 Propagation Scattering Matrix
 
-Propagation through a homogeneous layer of thickness \( d_m \) introduces a phase delay:
+Propagation through a homogeneous layer of thickness $ d_m $ introduces a phase delay:
 
 \[
 S_m^{\mathrm{prop}}=
@@ -197,7 +197,7 @@ B_{N+1}
 \end{pmatrix}.
 \]
 
-For left incidence \( (A_1=1,\,B_{N+1}=0) \):
+For left incidence $ (A_1=1,\,B_{N+1}=0) $:
 
 \[
 r = B_1 = S_{11}, \qquad
@@ -208,7 +208,7 @@ t = A_{N+1} = S_{21}.
 
 ### 3.4 Internal Field Reconstruction
 
-Once the incoming and outgoing amplitudes are fixed, the internal coefficients \( (A_m,B_m) \) are obtained by back-propagating through the cascaded scattering matrices.
+Once the incoming and outgoing amplitudes are fixed, the internal coefficients $ (A_m,B_m) $ are obtained by back-propagating through the cascaded scattering matrices.
 
 Because the AB coefficients are defined using the same reference planes as in the TMM formulation, **the same field reconstruction function** can be used:
 
