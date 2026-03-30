@@ -1,3 +1,4 @@
+clear; clc; close all;
 n1=3.5;
 n2=1.45;
 

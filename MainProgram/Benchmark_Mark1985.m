@@ -1,3 +1,5 @@
+clear; clc; close all;
+addpath('../Functions');
 %% ===== 基本参数 =====
 lambda0 = 431e-9;
 TEM = "TM";

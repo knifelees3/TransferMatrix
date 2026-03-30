@@ -76,6 +76,7 @@ n_m \cos\theta_m & -n_m \cos\theta_m
 $$
 
 **TM polarization**
+
 $$
 D_m^{\mathrm{TM}}=
 \begin{pmatrix}

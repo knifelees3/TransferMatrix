@@ -1,5 +1,5 @@
 clear; clc; close all;
-
+addpath('../Functions');
 %% ===== 1. 结构参数 =====
 c = 1;
 n0 = 1.0;
