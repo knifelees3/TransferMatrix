@@ -66,6 +66,7 @@ $$
 The polarization-dependent interface matrices are:
 
 **TE polarization**
+
 $$
 D_m^{\mathrm{TE}}=
 \begin{pmatrix}
@@ -114,10 +115,8 @@ $$
 
 The boundary conditions are:
 
-- **Left incidence:**  
-  $ A_1 = 1,\; \mathcal{B}_{N+1}=0 $
-- **Right incidence:**  
-  $ B_1 = 1,\; \mathcal{A}_{N+1}=0 $
+- **Left incidence:**  $ A_1 = 1,\; \mathcal{B}_{N+1}=0 $
+- **Right incidence:** $ B_1 = 1,\; \mathcal{A}_{N+1}=0 $
 
 ---
 
@@ -129,7 +128,7 @@ The boundary conditions are:
 - `Get_Field_From_ABCoe`  
   Reconstructs the spatial field distribution from the AB coefficients using the same reference-plane convention.
 
----
+
 
 ## 3. Scattering Matrix Method (SMM)
 
