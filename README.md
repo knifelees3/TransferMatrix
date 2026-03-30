@@ -21,9 +21,9 @@ The first and last layers are semi-infinite.
 
 In each layer $ m $, the field is written as a superposition of forward- and backward-propagating plane waves:
 
-\[
+$$
 E_m(z)=A_m e^{i k_{m,z}(z-z_m)}+B_m e^{-i k_{m,z}(z-z_m)},
-\]
+$$
 
 where:
 - $ A_m $ and $ B_m $ are the complex field amplitudes
@@ -44,7 +44,7 @@ where:
 
 The boundary conditions between adjacent layers relate the field coefficients through:
 
-\[
+$$
 \begin{pmatrix}
 A_{m-1} \\
 B_{m-1}
@@ -61,37 +61,37 @@ D_{m-1}^{-1} D_m P_m
 A_m \\
 B_m
 \end{pmatrix}.
-\]
+$$
 
 The polarization-dependent interface matrices are:
 
 **TE polarization**
-\[
+$$
 D_m^{\mathrm{TE}}=
 \begin{pmatrix}
 1 & 1 \\
 n_m \cos\theta_m & -n_m \cos\theta_m
 \end{pmatrix}
-\]
+$$
 
 **TM polarization**
-\[
+$$
 D_m^{\mathrm{TM}}=
 \begin{pmatrix}
 \cos\theta_m & \cos\theta_m \\
 n_m & -n_m
 \end{pmatrix}
-\]
+$$
 
 The propagation matrix of layer $ m $ with thickness $ d_m $ is:
 
-\[
+$$
 P_m=
 \begin{pmatrix}
 e^{-i k_{m,z} d_m} & 0 \\
 0 & e^{i k_{m,z} d_m}
 \end{pmatrix}.
-\]
+$$
 
 ---
 
@@ -99,7 +99,7 @@ e^{-i k_{m,z} d_m} & 0 \\
 
 By cascading all interfaces and propagation matrices, we obtain the global transfer matrix:
 
-\[
+$$
 \begin{pmatrix}
 A_1 \\
 B_1
@@ -110,7 +110,7 @@ T_{1\rightarrow N+1}
 \mathcal{A}_{N+1} \\
 \mathcal{B}_{N+1}
 \end{pmatrix}.
-\]
+$$
 
 The boundary conditions are:
 
@@ -137,7 +137,7 @@ The boundary conditions are:
 
 At the interface between layers $ m $ and $ m+1 $, the incoming and outgoing waves are related by:
 
-\[
+$$
 \begin{pmatrix}
 B_m \\
 A_{m+1}
@@ -151,7 +151,7 @@ t_m^{L} & r_m^{R}
 A_m \\
 B_{m+1}
 \end{pmatrix}.
-\]
+$$
 
 The Fresnel coefficients $ r^{L,R} $ and $ t^{L,R} $ depend on the polarization and refractive indices of the adjacent layers.
 
@@ -161,13 +161,13 @@ The Fresnel coefficients $ r^{L,R} $ and $ t^{L,R} $ depend on the polarization 
 
 Propagation through a homogeneous layer of thickness $ d_m $ introduces a phase delay:
 
-\[
+$$
 S_m^{\mathrm{prop}}=
 \begin{pmatrix}
 0 & e^{i k_{m,z} d_m} \\
 e^{i k_{m,z} d_m} & 0
 \end{pmatrix}.
-\]
+$$
 
 ---
 
@@ -175,13 +175,13 @@ e^{i k_{m,z} d_m} & 0
 
 The total scattering matrix is obtained by cascading all interface and propagation matrices using the **Redheffer star product**:
 
-\[
+$$
 S = S_N \star S_{N-1} \star \cdots \star S_1.
-\]
+$$
 
 The global relation reads:
 
-\[
+$$
 \begin{pmatrix}
 B_1 \\
 A_{N+1}
@@ -195,14 +195,14 @@ S_{21} & S_{22}
 A_1 \\
 B_{N+1}
 \end{pmatrix}.
-\]
+$$
 
 For left incidence $ (A_1=1,\,B_{N+1}=0) $:
 
-\[
+$$
 r = B_1 = S_{11}, \qquad
 t = A_{N+1} = S_{21}.
-\]
+$$
 
 ---
 
